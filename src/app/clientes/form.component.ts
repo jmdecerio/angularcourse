@@ -18,6 +18,18 @@ export class FormComponent implements OnInit {
               private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.cargarCliente();
+  }
+
+  cargarCliente(): void {
+    this.route.params.subscribe(
+      params => {
+        let id = params['id'];
+        if (id) {
+          this.clienteService.getCliente(id).subscribe(cliente => this.cliente = cliente);
+        }
+      }
+    );
   }
 
   public create(): void {
@@ -27,5 +39,14 @@ export class FormComponent implements OnInit {
         swal.fire("Cliente creado", `Cliente ${cliente.nombre} creado con exito`, 'success');
       }
     );
+  }
+
+  public update(): void {
+    this.clienteService.update(this.cliente).subscribe(
+      cliente => {
+        this.router.navigate(['../..'], { relativeTo: this.route });
+        swal.fire("Cliente actualizado", `Cliente ${cliente.nombre} actualizado con exito`, 'success');
+      }
+    )
   }
 }
