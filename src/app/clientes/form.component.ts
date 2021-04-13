@@ -11,7 +11,7 @@ import swal from 'sweetalert2';
 export class FormComponent implements OnInit {
 
   public cliente: Cliente = new Cliente();
-  public titulo: string = "Crear Cliente";
+  public titulo: string = "Formulario de Cliente:";
 
   constructor(private clienteService: ClienteService,
               private router: Router,
