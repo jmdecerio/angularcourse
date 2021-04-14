@@ -39,8 +39,8 @@ export class ClientesComponent implements OnInit {
       reverseButtons: true
         }).then((result) => {
           if (result.isConfirmed) {
-            this.clienteService.delete(cliente.id?cliente.id:0).subscribe(
-              response => this.clientes = this.clientes?this.clientes.filter( cli => cli != cliente):undefined
+            this.clienteService.delete(cliente.id).subscribe(
+              response => this.clientes = this.clientes.filter( cli => cli != cliente)
             );
             swalWithBootstrapButtons.fire(
               'Borrado!',
@@ -49,7 +49,5 @@ export class ClientesComponent implements OnInit {
             );
           }
         });
-
-
     }
 }
