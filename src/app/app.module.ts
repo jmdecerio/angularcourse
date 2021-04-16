@@ -19,6 +19,7 @@ import { MAT_DATE_LOCALE } from '@angular/material/core';
 
 import { registerLocaleData } from '@angular/common';
 import localeES from '@angular/common/locales/es';
+import { DetalleComponent } from './clientes/detalle/detalle.component';
 
 registerLocaleData(localeES, 'es');
 
@@ -30,7 +31,8 @@ registerLocaleData(localeES, 'es');
     DirectivaComponent,
     ClientesComponent,
     FormComponent,
-    PaginatorComponent
+    PaginatorComponent,
+    DetalleComponent
   ],
   imports: [
     MatDatepickerModule,
