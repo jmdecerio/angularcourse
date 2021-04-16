@@ -12,12 +12,13 @@ import { FormComponent } from './clientes/form.component';
 import { ClienteService } from './clientes/cliente.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { registerLocaleData } from '@angular/common';
-import localeES from '@angular/common/locales/es';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
+
+import { registerLocaleData } from '@angular/common';
+import localeES from '@angular/common/locales/es';
 
 registerLocaleData(localeES, 'es');
 
