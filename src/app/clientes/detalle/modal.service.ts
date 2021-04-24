@@ -5,7 +5,7 @@ import { Injectable, EventEmitter } from '@angular/core';
 })
 export class ModalService {
 
-  public modal = false;
+  public modal: boolean = false;
   private _notificarUpload = new EventEmitter<any>();
 
   constructor() { }
@@ -14,11 +14,11 @@ export class ModalService {
     return this._notificarUpload;
   }
 
-  abrirModal(): void {
+  abrirModal() {
     this.modal = true;
   }
 
-  cerrarModal(): void {
+  cerrarModal() {
     this.modal = false;
   }
 }
