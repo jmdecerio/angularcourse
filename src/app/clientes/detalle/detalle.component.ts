@@ -14,7 +14,7 @@ import swal from 'sweetalert2';
 export class DetalleComponent implements OnInit {
 
   @Input() cliente: Cliente;
-  titulo: string = "Detalle de Cliente";
+  titulo: string = 'Detalle de Cliente';
   progreso: number = 0;
 
   fotoSeleccionada: File;
