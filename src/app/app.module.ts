@@ -17,7 +17,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
 
-import { registerLocaleData } from '@angular/common';
+import { registerLocaleData, APP_BASE_HREF } from '@angular/common';
 import localeES from '@angular/common/locales/es';
 import { DetalleComponent } from './clientes/detalle/detalle.component';
 
@@ -45,7 +45,8 @@ registerLocaleData(localeES, 'es');
   ],
   providers: [ClienteService,
     {provide: LOCALE_ID, useValue: 'es' },
-    {provide: MAT_DATE_LOCALE, useValue: 'es'}
+    {provide: MAT_DATE_LOCALE, useValue: 'es'},
+    {provide: APP_BASE_HREF, useValue: '/clientes-app'}
   ],
   bootstrap: [AppComponent]
 })
